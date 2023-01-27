@@ -5,14 +5,15 @@ if ($_POST["message"]) {
     $phone = $_POST['phone'];
     $message = $_POST['message'];
 
-    $message = 'Name: ' . $name . "\n" . 'Phone: ' . $phone . "\n" . 'Email: ' . $email . "\n" . 'Message: ' . $message;
+    $message = 'The below information was submitted via the contact form on <a href="http://www.AllGood.Plumbing">All Good Plumbing</a><br><br>Name: ' . $name . "<br>" . 'Phone: ' . $phone . "<br>" . 'Email: ' . $email . "<br>" . 'Message: ' . $message;
 
-    $ehead = 'From: All Good Plumbing<Support@PsychoCoding.net>' . PHP_EOL;
+    $ehead = 'From: All Good Plumbing<Inquiry@AllGood.Plumbing>' . PHP_EOL;
+    $ehead .= "Reply-To: " .$email. PHP_EOL;
     $ehead .= "MIME-Version: 1.0" . PHP_EOL;
     $ehead .= "Content-type:text/html;charset=UTF-8" . PHP_EOL;
 
     $erespo = "Unfortunately there was an error sending your message :(";
-    if(mail('superphil99@yahoo.com', 'Website Inquiry - All Good Plumbing', $message, $ehead))
+    if(mail('frank.lom.99@gmail.com', 'Website Inquiry - All Good Plumbing', $message, $ehead)) {
         $erespo = "Thank you for your message, we will get back to you as soon as possible!";
     }
     echo "<script>alert('".$erespo."');</script>";
