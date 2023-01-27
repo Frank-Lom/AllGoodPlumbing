@@ -44,6 +44,9 @@ nav li a {
   text-decoration: none;
   border-style: solid;
   border-color: #fef3e9;
+  font-weight: 700;
+  background-color: transparent;
+  color: #fef3e9;
 }
 
 li a:hover {
@@ -57,17 +60,6 @@ li a:active {
 
 .logo {
   left: 0;
-}
-
-nav a {
-  font-weight: bold;
-  display: inline-block;
-  padding: 10px 20px;
-  border: none;
-  background-color: #333;
-  color: #E63946;
-  text-decoration: none;
-  margin-right: 20px;
 }
 
 main {
