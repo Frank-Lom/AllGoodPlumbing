@@ -1,10 +1,37 @@
+<?php
+if ($_POST["message"]) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $message = $_POST['message'];
+
+    $to = 'superphil99@yahoo.com';
+    $subject = 'Website Inquiry - All Good Plumbing';
+    $message = 'Name: ' . $name . "\n" . 'Phone: ' . $phone . "\n" . 'Email: ' . $email . "\n" . 'Message: ' . $message;
+
+    $headers = 'From: ' . $email . "\r\n" .
+        'Reply-To: ' . $email . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+
+    $erespo = "";
+    if (mail($to, $subject, $message, $headers)) {
+        $erespo = "Thank you for your message, we will get back to you as soon as possible!";
+
+    } else {
+        $erespo = "Unfortunately there was an error sending your message :(";
+    }
+    echo "<script>alert('".$erespo."');</script>";
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>All Good Plumbing</title>
     <link rel="stylesheet" type="text/css" href="assets/style.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -84,22 +111,25 @@
                     <p>Have a question or need to schedule a service?<br>Contact us at <a
                             href="tel:+1615-967-0552">615-967-0552</a> or fill out the form below to send us a message
                     </p>
-                    <form action="contactus.php" method="post" id="contact">
+                    <form method="post" id="contact">
                         <div class="formitm">
                             <label for="name">Name:</label>
                             <input type="text" id="name" name="name" class="confor" placeholder="John Doe">
                         </div>
                         <div class="formitm">
                             <label for="phone">Phone:</label>
-                            <input type="tel" id="phone" name="phone" class="confor" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                            <input type="tel" id="phone" name="phone" class="confor"
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
                         </div>
                         <div class="formitm">
                             <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" class="confor" placeholder="myemail@example.com">
+                            <input type="email" id="email" name="email" class="confor"
+                                placeholder="myemail@example.com">
                         </div>
                         <div class="formitm">
                             <label for="message">Message:</label>
-                            <textarea id="message" name="message" class="confor1" placeholder="Your message here"></textarea>
+                            <textarea id="message" name="message" class="confor1"
+                                placeholder="Your message here"></textarea>
                         </div>
                         <input type="submit" class="submit" value="Send Message">
                     </form>
@@ -111,15 +141,16 @@
         <p>Copyright © All Good Plumbing</p>
     </footer>
 </body>
-<script> 
-    $(window).ready(function() {
-    $("#contact").on("keypress", function (event) {
-        var keyPressed = event.keyCode || event.which;
-        if (keyPressed === 13 && (document.activeElement != document.getElementById("message"))) {
-            event.preventDefault();
-            return false;
-        }
+<script>
+    $(window).ready(function () {
+        $("#contact").on("keypress", function (event) {
+            var keyPressed = event.keyCode || event.which;
+            if (keyPressed === 13 && (document.activeElement != document.getElementById("message"))) {
+                event.preventDefault();
+                return false;
+            }
+        });
     });
-    });
-</script> 
+</script>
+
 </html>
