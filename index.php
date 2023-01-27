@@ -41,9 +41,6 @@ if ($_POST["message"]) {
         </ul>
     </nav>
     <main>
-        <header>
-            <img src="assets/images/logo.png" alt="All Good Plumbing">
-        </header>
         <section id="about">
             <h1>About Us</h1>
             <div class="details altl">
