@@ -106,12 +106,15 @@ section#reviews .review {
   margin-bottom: 20px;
 }
 
-footer p {
-  font-size: small;
+footer {
   background-color: #090730;
   color: #E63946;
   text-align: center;
   padding: 2px;
+}
+
+footer p {
+  font-size: small;
 }
 
 header {
