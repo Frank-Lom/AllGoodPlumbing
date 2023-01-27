@@ -5,20 +5,15 @@ if ($_POST["message"]) {
     $phone = $_POST['phone'];
     $message = $_POST['message'];
 
-    $to = 'superphil99@yahoo.com';
-    $subject = 'Website Inquiry - All Good Plumbing';
     $message = 'Name: ' . $name . "\n" . 'Phone: ' . $phone . "\n" . 'Email: ' . $email . "\n" . 'Message: ' . $message;
 
-    $headers = 'From: ' . $email . "\r\n" .
-        'Reply-To: ' . $email . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
+    $ehead = 'From: All Good Plumbing<Support@PsychoCoding.net>' . PHP_EOL;
+    $ehead .= "MIME-Version: 1.0" . PHP_EOL;
+    $ehead .= "Content-type:text/html;charset=UTF-8" . PHP_EOL;
 
-    $erespo = "";
-    if (mail($to, $subject, $message, $headers)) {
+    $erespo = "Unfortunately there was an error sending your message :(";
+    if(mail('superphil99@yahoo.com', 'Website Inquiry - All Good Plumbing', $message, $ehead))
         $erespo = "Thank you for your message, we will get back to you as soon as possible!";
-
-    } else {
-        $erespo = "Unfortunately there was an error sending your message :(";
     }
     echo "<script>alert('".$erespo."');</script>";
 }
