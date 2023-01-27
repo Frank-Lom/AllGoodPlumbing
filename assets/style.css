@@ -138,3 +138,7 @@ header img {
   max-width: 100%;
   object-fit: cover;
 }
+
+.confor {
+  width: 75%;
+}
