@@ -13,7 +13,7 @@ if ($_POST["message"]) {
     $ehead .= "Content-type:text/html;charset=UTF-8" . PHP_EOL;
 
     $erespo = "Unfortunately there was an error sending your message :(";
-    if(mail('frank.lom.99@gmail.com', 'Website Inquiry - All Good Plumbing', $message, $ehead)) {
+    if(mail('1allgoodplumbing@gmail.com', 'Website Inquiry - All Good Plumbing', $message, $ehead)) {
         $erespo = "Thank you for your message, we will get back to you as soon as possible!";
     }
     echo "<script>alert('".$erespo."');</script>";
