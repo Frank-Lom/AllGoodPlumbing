@@ -47,6 +47,7 @@ nav li a {
   font-weight: 700;
   background-color: transparent;
   color: #fef3e9;
+  margin-right: 20px;
 }
 
 li a:hover {
@@ -105,7 +106,7 @@ section#reviews .review {
   margin-bottom: 20px;
 }
 
-footer {
+footer p {
   font-size: small;
   background-color: #090730;
   color: #E63946;
