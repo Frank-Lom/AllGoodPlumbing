@@ -8,15 +8,15 @@ if ($_POST["message"]) {
     $message = 'The below information was submitted via the contact form on <a href="http://www.AllGood.Plumbing">All Good Plumbing</a><br><br>Name: ' . $name . "<br>" . 'Phone: ' . $phone . "<br>" . 'Email: ' . $email . "<br>" . 'Message: ' . $message;
 
     $ehead = 'From: All Good Plumbing<Inquiry@AllGood.Plumbing>' . PHP_EOL;
-    $ehead .= "Reply-To: " .$email. PHP_EOL;
+    $ehead .= "Reply-To: " . $email . PHP_EOL;
     $ehead .= "MIME-Version: 1.0" . PHP_EOL;
     $ehead .= "Content-type:text/html;charset=UTF-8" . PHP_EOL;
 
     $erespo = "Unfortunately there was an error sending your message :(";
-    if(mail('1allgoodplumbing@gmail.com', 'Website Inquiry - All Good Plumbing', $message, $ehead)) {
+    if (mail('1allgoodplumbing@gmail.com', 'Website Inquiry - All Good Plumbing', $message, $ehead)) {
         $erespo = "Thank you for your message, we will get back to you as soon as possible!";
     }
-    echo "<script>alert('".$erespo."');</script>";
+    echo "<script>alert('" . $erespo . "');</script>";
 }
 ?>
 
@@ -28,6 +28,15 @@ if ($_POST["message"]) {
     <link rel="stylesheet" type="text/css" href="assets/style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#b4b4b4">
 </head>
 
 <body>
