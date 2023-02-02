@@ -26,6 +26,14 @@ if ($_POST["message"]) {
 <head>
     <title>All Good Plumbing</title>
     <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Z12M91BYY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-4Z12M91BYY');
+    </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
