@@ -53,7 +53,7 @@ if ($_POST["message"]) {
             <img class="logo" src="assets/images/logo.png" alt="All Good Plumbing logo">
             <li><a href="#about">About Us</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#reviews">Reviews</a></li>
+            <!--<li><a href="#reviews">Reviews</a></li>-->
             <li><a href="#contact">Contact Us</a></li>
         </ul>
     </nav>
@@ -85,19 +85,19 @@ if ($_POST["message"]) {
                 <p>At All Good Plumbing, we offer a wide range of services to meet all of your plumbing needs.<br>
                     From fixing leaks and unclogging drains, to installing new fixtures and appliances, we've got you
                     covered.<br>
-                    Our services include the following:
+                    <!--Our services include the following:-->
                 </p>
-                <ul>
+                <!--<ul>
                     <li>Leak repairs</li>
                     <li>Drain cleaning</li>
                     <li>New plumbing installations</li>
                     <li>Toilet repairs and replacements</li>
                     <li>Faucet repairs and replacements</li>
                     <li>Water heater repairs and replacements</li>
-                </ul>
+                </ul>-->
             </div>
         </section>
-        <section id="reviews">
+        <!--<section id="reviews">
             <h1>Reviews</h1>
             <div class="details altl">
                 <img src="assets/images/reviews.png" alt="stock image of a happy customer">
@@ -112,7 +112,7 @@ if ($_POST["message"]) {
                     <p>- Jane Smith</p>
                 </div>
             </div>
-        </section>
+        </section> -->
         <section id="contact">
             <h1>Contact Us</h1>
             <div class="details altr">
